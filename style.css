@@ -154,7 +154,6 @@ body {
   color: #333;
 }
 
-/* BUTTON */
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -163,6 +162,7 @@ body {
   color: #111;
   text-decoration: none;
   border-radius: 4px;
+  border: 1px solid #808080; /* přidaný šedý border */
   transition: background 0.3s, color 0.3s;
   text-align: center;
   font-weight: 500;
@@ -171,6 +171,7 @@ body {
 .button:hover {
   background-color: #c0c0c0;
   color: #fff;
+  border-color: #999; /* můžeme lehce zesvětlit při hoveru */
 }
 
 .button--ghost {
@@ -392,3 +393,4 @@ ul {
 .about__text p {
   margin-bottom: 1rem;  /* prostor mezi odstavci */
 }
+
