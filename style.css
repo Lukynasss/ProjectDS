@@ -1,0 +1,454 @@
+
+
+/* Reset a základní nastavení */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* NAVBAR */
+.site-header {
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__list a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: lightgray;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  text-align: center;
+  font-weight: 500;
+}
+
+.nav__list a:hover {
+  background-color: lightgray;
+}
+
+/* HERO - pouze logo jako pozadí */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #999; /* šedý pás */
+  height: 500px; /* větší výška hero pásu */
+  overflow: hidden;
+}
+
+/* Logo vyplní celý pás jako pozadí */
+.hero__logo-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8; /* výraznější viditelnost loga */
+  z-index: 1;
+}
+
+/* SECTIONS */
+.section {
+  padding: 4rem 1rem;
+  border-top: 3px solid #999; /* výraznější čára oddělující sekce */
+}
+
+.section:first-of-type {
+  border-top: none; /* hero sekce bez horní čáry */
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section p {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+/* RULES LIST */
+#rules ul {
+  list-style: disc inside;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 1rem;
+}
+
+#rules li {
+  padding: 0.5rem 0;
+}
+
+/* JOIN STEPS - vycentrované nadpisy a text */
+#join .steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none; /* odstraní automatické číslování */
+}
+
+#join .steps__item {
+  text-align: center;
+}
+
+#join .steps__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+#join .steps__item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#join a {
+  color: #2e5339;
+  text-decoration: underline;
+}
+
+/* BUTTON - zlatá barva podle loga */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem;
+  background-color: lightgrey; /* zlatá barva */
+  color: #111; /* tmavý text pro lepší čitelnost */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  text-align: center;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: lightgrey; /* tmavší zlatá při hover */
+  color: #fff;
+}
+
+.button--ghost {
+  background: transparent;
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+}
+
+.button--ghost:hover {
+  background-color: #D4AF37;
+  color: #111;
+}
+
+
+/* CARDS / UNITS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* TEAM */
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team__member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+}
+
+.team__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.team__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.team__role {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .team__list {
+    flex-direction: column;
+  }
+  .hero {
+    height: 300px; /* menší výška na mobilu */
+  }
+}
+
+.feature-list {
+  list-style: none; /* odstraní tečky */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* položky pod sebe */
+  align-items: center; /* vycentruje horizontálně */
+  gap: 1rem; /* mezera mezi položkami, můžeš upravit */
+}
+
+.feature-list__item {
+  text-align: center; /* vycentruje text uvnitř položky */
+}
+
+.site-header {
+  position: relative;
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.header__logo {
+  position: absolute;
+  left: 1rem; /* úplně vlevo */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center; /* menu vycentrované */
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header__logo {
+    position: static;
+    transform: none;
+    margin-bottom: 0.5rem;
+  }
+  .header__inner {
+    flex-direction: column;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Rules Box --- */
+.rules-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.rule-box {
+  background: lightgray; /* tmavší pozadí */
+  border: 1px solid white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rule-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.rule-box__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #f9fafb; /* skoro bílá */
+}
+
+.rule-box__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d1d5db; /* šedý text */
+}
+
+/* --- Gallery --- */
+.gallery__slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gallery__slides {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.gallery__slides img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.gallery__slides img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.gallery__thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery__thumbnails img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.gallery__thumbnails img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery__thumbnails img.active {
+  border: 2px solid #facc15; /* zvýraznění (žlutá) */
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
