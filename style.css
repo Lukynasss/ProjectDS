@@ -394,21 +394,28 @@ ul {
   margin-bottom: 1rem;  /* prostor mezi odstavci */
 }
 
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 .card {
   background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  
-  /* Vystouplý efekt */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* více vystouplé při hoveru */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
 
 
 
